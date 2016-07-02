@@ -85,7 +85,7 @@ for (var i = 0; i < addressElements.length; i++) {
     
     // XAttribute
     var typeAttribute = ae.attribute('Type');
-    console.log('Type value: ' + ae.value);
+    console.log('Type attribute: ' + ae.value);
 }
 
 // XNode[]
@@ -100,13 +100,16 @@ for (var i = 0; i < allNodes.length; i++) {
         var allAttributes = n.attributes();  // the attributes
     }
     else if (n instanceof XmlObjects.XComment) {
-        console.log("I am a comment.");
+        console.log("I am a comment: " + n.value);
     }
     else if (n instanceof XmlObjects.XText) {
-        console.log("I am a text.");
+        console.log("I am a text." + n.value);
     }
     else if (n instanceof XmlObjects.XCData) {
-        console.log("I am a CDATA.");
+        console.log("I am a CDATA: " + n.value);
     }
 }
+
+// create XML string
+var xmlStr = rootElement.toString();
 ```
