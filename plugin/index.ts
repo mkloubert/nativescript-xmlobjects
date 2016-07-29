@@ -606,22 +606,6 @@ function getOwnProperties(obj) {
     return properties;
 }
 
-function hasProperty(obj: any, propertyName: string): boolean {
-    if (TypeUtils.isNullOrUndefined(obj)) {
-        return obj;
-    }
-
-    obj.hasProperty();
-
-    for (var p in obj) {
-        if (propertyName === p) {
-            return true;
-        }
-    }
-    
-    return false;
-}
-
 /**
  * Parses an XML string.
  * 
