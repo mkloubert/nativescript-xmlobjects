@@ -94,11 +94,10 @@ for (var i = 0; i < allNodes.length; i++) {
     var n = allNodes[i];
     
     if (n instanceof XmlObjects.XElement) {
-        console.log("I am an element with attributes.");
-        
         // XAttribute[]
         var allAttributes = n.attributes();  // the attributes
-        console.log("I am an element: " + n.value);
+        
+        console.log("I am an element with attributes: " + n.value);
     }
     else if (n instanceof XmlObjects.XComment) {
         console.log("I am a comment: " + n.value);
